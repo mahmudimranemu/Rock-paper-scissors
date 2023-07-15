@@ -1,0 +1,3 @@
+user input rock, paper or scissor
+computer input rock, paper or scissor
+declare a winner
