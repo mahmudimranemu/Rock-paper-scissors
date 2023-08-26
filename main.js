@@ -22,10 +22,17 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function showResult(playerChoice) {
-  console.log(`Player choice: ${playerChoice}`);
-  const computerChoice = getComputerChoice();
-  console.log(`Computer Choice: ${computerChoice}`);
-  const score = playRound(playerChoice, computerChoice);
-  console.log(score);
+  console.log(playerChoice);
+  //   const computerChoice = getComputerChoice();
+  //   console.log(`Computer Choice: ${computerChoice}`);
+  //   const score = playRound(playerChoice, computerChoice);
+  //   console.log(score);
 }
-console.log(showResult("Scissors"));
+
+function theGame() {
+  const rpsButtons = document.querySelectorAll(".rpsSelect");
+
+  rpsButtons.forEach((rpsButton) => {
+    rpsButton.onclick = () => showResult(rpsButton.value);
+  });
+}
