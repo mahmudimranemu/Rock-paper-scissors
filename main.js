@@ -28,12 +28,6 @@ function showResult(score, playerChoice, computerChoice) {
   const playerScoreDiv = document.getElementById("player-score");
   const computerScoreDiv = document.getElementById("computer-score");
 
-  const robots = document.querySelectorAll(".robot");
-
-  robots.forEach((robot) => {
-    robot.id
-  });
-
   if (score == -1) {
     resultDiv.innerText = "You Lose!";
   } else if (score == 0) {

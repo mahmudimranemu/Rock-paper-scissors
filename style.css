@@ -49,11 +49,3 @@ button:hover img {
   text-align: center;
   padding: 20px 0;
 }
-
-.robot {
-  display: none;
-}
-
-.robot-show {
-  display: block !important;
-}
