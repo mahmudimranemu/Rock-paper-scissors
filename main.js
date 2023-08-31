@@ -1,10 +1,12 @@
+const totalScore = { playerScore: 0, computerScore: 0 };
+
 function getComputerChoice() {
   let weapon = ["Rock", "Paper", "Scissors"];
   let result = Math.floor(Math.random() * weapon.length);
   return weapon[result];
 }
 
-function playRound(playerChoice, computerChoice) {
+function getResult(playerChoice, computerChoice) {
   let score = 0;
   if (playerChoice == computerChoice) {
     score = 0;
@@ -21,18 +23,46 @@ function playRound(playerChoice, computerChoice) {
   return score;
 }
 
-function showResult(playerChoice) {
-  console.log(playerChoice);
-  //   const computerChoice = getComputerChoice();
-  //   console.log(`Computer Choice: ${computerChoice}`);
-  //   const score = playRound(playerChoice, computerChoice);
-  //   console.log(score);
+function showResult(score, playerChoice, computerChoice) {
+  const resultDiv = document.getElementById("result");
+  const playerScoreDiv = document.getElementById("player-score");
+  const computerScoreDiv = document.getElementById("computer-score");
+
+  const robots = document.querySelectorAll(".robot");
+
+  robots.forEach((robot) => {
+    robot.id
+  });
+
+  if (score == -1) {
+    resultDiv.innerText = "You Lose!";
+  } else if (score == 0) {
+    resultDiv.innerText = "It's a Tie!";
+  } else {
+    resultDiv.innerText = "You Won!";
+  }
+
+  playerScoreDiv.innerText = `👨 ${playerChoice}`;
+  computerScoreDiv.innerText = `🤖 ${computerChoice}`;
 }
 
-function theGame() {
+function onClickRPS(playerChoice) {
+  const computerChoice = getComputerChoice();
+
+  const score = getResult(playerChoice, computerChoice);
+  totalScore["playerScore"] += score;
+
+  showResult(score, playerChoice, computerChoice);
+}
+
+function playGame() {
   const rpsButtons = document.querySelectorAll(".rpsSelect");
 
   rpsButtons.forEach((rpsButton) => {
-    rpsButton.onclick = () => showResult(rpsButton.value);
+    rpsButton.onclick = () => onClickRPS(rpsButton.value);
   });
 }
+
+function endGame() {}
+
+playGame();

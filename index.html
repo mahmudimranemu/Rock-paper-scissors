@@ -13,44 +13,61 @@
   <body>
     <main>
       <div class="container">
-        <div class="item">
-          <button
-            class="rpsSelect"
-            value="Rock">
-            Rock
-          </button>
-          <!-- <img
-            id="rpsSelect"
-            src="img/rock.png"
-            alt="" /> -->
-        </div>
-        <div class="item">
-          <button
-            class="rpsSelect"
-            value="Paper">
-            Paper
-          </button>
-          <!-- <img
-            id="rpsSelect"
-            src="img/paper.png"
-            alt="" /> -->
-        </div>
-        <div class="item">
-          <button
-            class="rpsSelect"
-            value="Scissors">
-            Scissors
-          </button>
-          <!-- <img
-            id="rpsSelect"
-            src="img/scissors.png"
-            alt="" /> -->
+        <div class="btn-group">
+          <div class="item">
+            <button
+              class="rpsSelect"
+              value="Rock">
+              <img
+                id="rpsSelect"
+                src="img/rock.png"
+                alt="" />
+            </button>
+          </div>
+          <div class="item">
+            <button
+              class="rpsSelect"
+              value="Paper">
+              <img
+                id="rpsSelect"
+                src="img/paper.png"
+                alt="" />
+            </button>
+          </div>
+          <div class="item">
+            <button
+              class="rpsSelect"
+              value="Scissors">
+              <img
+                id="rpsSelect"
+                src="img/scissors.png"
+                alt="" />
+            </button>
+          </div>
         </div>
       </div>
       <div
         id="result"
-        class="result">
-        <h2>You won!</h2>
+        class="result"></div>
+      <div class="scores">
+        <div id="player-score"></div>
+        <div id="computer-score"></div>
+      </div>
+      <div id="robot-div">
+        <div
+          class="robot"
+          id="-1">
+          <img
+            src="img/robot-win.gif"
+            alt="" />
+        </div>
+        <div
+          class="robot"
+          id="1">
+          <img
+            src="img/robot-lose.gif"
+            alt="" />
+        </div>
       </div>
     </main>
     <script src="main.js"></script>

@@ -11,15 +11,49 @@ body {
   justify-content: center;
   height: 100vh;
 }
-
+button {
+  background: #fff;
+  border: none;
+}
+button img {
+  transition: all 0.5s;
+}
+button:hover img {
+  scale: 1.1;
+}
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.btn-group {
+  display: flex;
+}
+
 .item img {
   width: auto;
   height: 100px;
   cursor: pointer;
+}
+
+.scores {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+}
+
+.result {
+  font-size: 34px;
+  font-weight: bold;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.robot {
+  display: none;
+}
+
+.robot-show {
+  display: block !important;
 }
